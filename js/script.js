@@ -115,12 +115,32 @@ if (tickerEl) {
 // ---------- Footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ---------- Contact form (démo, sans backend) ----------
+// ---------- Contact form (Netlify Forms) ----------
 const form = document.getElementById("contact-form");
-const formNote = document.getElementById("form-note");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  formNote.textContent = "Merci ! Votre demande a bien été enregistrée. Nous vous recontacterons rapidement.";
-  form.reset();
-});
+if (form) {
+  const formNote = document.getElementById("form-note");
+  const submitBtn = form.querySelector("button[type=submit]");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    formNote.textContent = "Envoi en cours…";
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => {
+        formNote.textContent = "Merci ! Votre demande a bien été envoyée. Nous vous recontacterons rapidement.";
+        form.reset();
+      })
+      .catch(() => {
+        formNote.textContent = "Une erreur est survenue. Contactez-nous directement via WhatsApp.";
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+      });
+  });
+}

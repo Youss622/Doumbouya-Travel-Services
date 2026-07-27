@@ -878,6 +878,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   transition: border-color var(--transition);
 }
 
+.form-hidden-field { display: none; }
+
 .form-note {
   margin: 0;
   font-size: 0.88rem;
