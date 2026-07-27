@@ -115,7 +115,7 @@ if (tickerEl) {
 // ---------- Footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ---------- Contact form (Netlify Forms) ----------
+// ---------- Contact form (Netlify Function + Resend) ----------
 const form = document.getElementById("contact-form");
 
 if (form) {
@@ -127,12 +127,15 @@ if (form) {
     submitBtn.disabled = true;
     formNote.textContent = "Envoi en cours…";
 
-    fetch("/", {
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    fetch("/.netlify/functions/contact", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(new FormData(form)).toString(),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     })
-      .then(() => {
+      .then((res) => {
+        if (!res.ok) throw new Error("Erreur serveur");
         formNote.textContent = "Merci ! Votre demande a bien été envoyée. Nous vous recontacterons rapidement.";
         form.reset();
       })
