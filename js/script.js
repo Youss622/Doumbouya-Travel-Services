@@ -42,6 +42,54 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// ---------- Boutique: filter & sort ----------
+const productsGrid = document.getElementById("products-grid");
+
+if (productsGrid) {
+  const categorySelect = document.getElementById("category-select");
+  const sortSelect = document.getElementById("sort-select");
+  const resultCount = document.getElementById("result-count");
+  const noResults = document.getElementById("no-results");
+  const cards = Array.from(productsGrid.querySelectorAll(".product-card"));
+  const originalOrder = cards.slice();
+
+  function renderProducts() {
+    const category = categorySelect.value;
+    const sort = sortSelect.value;
+
+    let visible = originalOrder.filter(
+      (card) => category === "all" || card.dataset.category === category
+    );
+
+    if (sort === "name-asc") {
+      visible.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name, "fr"));
+    } else if (sort === "name-desc") {
+      visible.sort((a, b) => b.dataset.name.localeCompare(a.dataset.name, "fr"));
+    } else if (sort === "price-asc") {
+      visible.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+    } else if (sort === "price-desc") {
+      visible.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+    }
+
+    cards.forEach((card) => { card.hidden = true; });
+    visible.forEach((card) => {
+      card.hidden = false;
+      productsGrid.appendChild(card);
+    });
+
+    const count = visible.length;
+    resultCount.textContent = count > 1
+      ? `Affichage de ${count} produits`
+      : count === 1
+        ? "Affichage de 1 produit"
+        : "Aucun produit trouvé";
+    noResults.hidden = count !== 0;
+  }
+
+  categorySelect.addEventListener("change", renderProducts);
+  sortSelect.addEventListener("change", renderProducts);
+}
+
 // ---------- Rotating announcement ticker ----------
 const tickerMessages = [
   "✈️ Billets, visas, hôtels et circuits : tout en un seul endroit.",

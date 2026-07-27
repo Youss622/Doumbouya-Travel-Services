@@ -70,116 +70,132 @@
   <section class="section">
     <div class="container">
 
-      <h2 class="category-heading">📱 Téléphones</h2>
-      <div class="grid products-grid">
-        <div class="card product-card">
+      <p class="section-eyebrow">Catalogue</p>
+      <h2 class="section-title">Nos produits</h2>
+      <p class="section-desc">Filtrez par catégorie ou triez la liste, comme dans un vrai catalogue en ligne. Les prix sont indicatifs : la disponibilité et le tarif final sont confirmés par WhatsApp.</p>
+
+      <div class="shop-toolbar">
+        <p class="shop-result-count" id="result-count">Affichage de 9 produits</p>
+        <div class="shop-toolbar-selects">
+          <select id="category-select" class="contact-select shop-select" aria-label="Filtrer par catégorie">
+            <option value="all">Toutes les catégories</option>
+            <option value="telephones">📱 Téléphones</option>
+            <option value="ordinateurs">💻 Ordinateurs</option>
+            <option value="accessoires">🎧 Accessoires</option>
+          </select>
+          <select id="sort-select" class="contact-select shop-select" aria-label="Trier les produits">
+            <option value="default">Tri par défaut</option>
+            <option value="name-asc">Nom, A à Z</option>
+            <option value="name-desc">Nom, Z à A</option>
+            <option value="price-asc">Tri par tarif croissant</option>
+            <option value="price-desc">Tri par tarif décroissant</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid products-grid" id="products-grid">
+        <div class="card product-card" data-category="telephones" data-name="Smartphone Android 128 Go" data-price="1800000">
           <div class="product-thumb icon-blue">📱</div>
           <div class="product-body">
             <h3>Smartphone Android 128 Go</h3>
             <p>Double SIM, écran 6.5", bonne autonomie.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">1 800 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Smartphone%20Android%20128%20Go" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
-        <div class="card product-card">
+        <div class="card product-card" data-category="telephones" data-name="Smartphone Android 256 Go" data-price="2400000">
           <div class="product-thumb icon-cyan">📱</div>
           <div class="product-body">
             <h3>Smartphone Android 256 Go</h3>
             <p>Grande capacité de stockage, double caméra.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">2 400 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Smartphone%20Android%20256%20Go" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
-        <div class="card product-card">
+        <div class="card product-card" data-category="telephones" data-name="Téléphone reconditionné" data-price="900000">
           <div class="product-thumb icon-amber">📱</div>
           <div class="product-body">
             <h3>Téléphone reconditionné</h3>
             <p>Testé et garanti, une alternative économique.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">900 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20un%20téléphone%20reconditionné" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
-      </div>
-
-      <h2 class="category-heading">💻 Ordinateurs</h2>
-      <div class="grid products-grid">
-        <div class="card product-card">
+        <div class="card product-card" data-category="ordinateurs" data-name="Ordinateur portable 15 pouces" data-price="3500000">
           <div class="product-thumb icon-purple">💻</div>
           <div class="product-body">
             <h3>Ordinateur portable 15"</h3>
             <p>8 Go de RAM, idéal pour la bureautique.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">3 500 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20l'ordinateur%20portable%2015" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
-        <div class="card product-card">
+        <div class="card product-card" data-category="ordinateurs" data-name="Ordinateur portable pro" data-price="5200000">
           <div class="product-thumb icon-green">💻</div>
           <div class="product-body">
             <h3>Ordinateur portable pro</h3>
             <p>Performant pour la formation Amadeus et le travail en agence.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">5 200 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20l'ordinateur%20portable%20pro" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
-        <div class="card product-card">
+        <div class="card product-card" data-category="ordinateurs" data-name="Imprimante multifonction" data-price="1200000">
           <div class="product-thumb icon-navy">🖨️</div>
           <div class="product-body">
             <h3>Imprimante multifonction</h3>
             <p>Impression, scan et copie pour le bureau.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">1 200 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20l'imprimante%20multifonction" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
-      </div>
-
-      <h2 class="category-heading">🎧 Accessoires</h2>
-      <div class="grid products-grid">
-        <div class="card product-card">
+        <div class="card product-card" data-category="accessoires" data-name="Écouteurs sans fil" data-price="350000">
           <div class="product-thumb icon-blue">🎧</div>
           <div class="product-body">
             <h3>Écouteurs sans fil</h3>
             <p>Bluetooth, autonomie longue durée.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">350 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20les%20écouteurs%20sans%20fil" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
-        <div class="card product-card">
+        <div class="card product-card" data-category="accessoires" data-name="Chargeur et câbles" data-price="150000">
           <div class="product-thumb icon-cyan">🔌</div>
           <div class="product-body">
             <h3>Chargeur &amp; câbles</h3>
             <p>Chargeurs rapides et câbles pour tous types d'appareils.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">150 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20un%20chargeur" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
-        <div class="card product-card">
+        <div class="card product-card" data-category="accessoires" data-name="Batterie externe" data-price="400000">
           <div class="product-thumb icon-amber">🔋</div>
           <div class="product-body">
             <h3>Batterie externe</h3>
             <p>Grande capacité, pratique en voyage.</p>
-            <span class="product-price">Prix sur demande</span>
+            <span class="product-price">400 000 GNF</span>
             <a href="https://wa.me/224627931640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20une%20batterie%20externe" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm btn-block">
               <span class="icon-whatsapp">✆</span> Commander
             </a>
           </div>
         </div>
       </div>
+
+      <p class="shop-no-results" id="no-results" hidden>Aucun produit ne correspond à ce filtre. <a href="https://wa.me/224627931640" target="_blank" rel="noopener">Contactez-nous sur WhatsApp</a>, on vous aide à trouver ce qu'il vous faut.</p>
 
     </div>
   </section>
