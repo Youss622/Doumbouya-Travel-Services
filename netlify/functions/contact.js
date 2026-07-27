@@ -26,10 +26,10 @@ exports.handler = async (event) => {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "DTS Site <onboarding@resend.dev>",
       to: "doumbouyatravelservices@gmail.com",
-      reply_to: email,
+      replyTo: email,
       subject: `Nouvelle demande de contact — ${name}`,
       text: [
         `Nom: ${name}`,
@@ -41,6 +41,11 @@ exports.handler = async (event) => {
         message || "(aucun message)",
       ].join("\n"),
     });
+
+    if (error) {
+      console.error("Resend error:", error);
+      return { statusCode: 500, body: JSON.stringify({ error: "Échec de l'envoi" }) };
+    }
 
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
   } catch (err) {
