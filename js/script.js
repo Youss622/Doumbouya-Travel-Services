@@ -88,6 +88,13 @@ if (productsGrid) {
 
   categorySelect.addEventListener("change", renderProducts);
   sortSelect.addEventListener("change", renderProducts);
+
+  const requestedCategory = new URLSearchParams(window.location.search).get("cat");
+  if (requestedCategory && [...categorySelect.options].some((opt) => opt.value === requestedCategory)) {
+    categorySelect.value = requestedCategory;
+  }
+
+  renderProducts();
 }
 
 // ---------- Rotating announcement ticker ----------
