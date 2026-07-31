@@ -646,6 +646,42 @@ ul { list-style: none; margin: 0; padding: 0; }
   box-shadow: var(--shadow-card);
 }
 
+/* ---------- Price table ---------- */
+.price-table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.price-table th,
+.price-table td {
+  padding: 16px 22px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.price-table th {
+  background: var(--navy-900);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.price-table td:last-child,
+.price-table th:last-child {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--blue-500);
+}
+
+.price-table tbody tr:nth-child(even) { background: var(--off-white); }
+
 /* ---------- Steps ---------- */
 .steps-grid { grid-template-columns: repeat(4, 1fr); }
 
@@ -699,6 +735,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .dest-mecca   { background: linear-gradient(135deg, #2f9e6e, #0e1a44); }
 .dest-dakar   { background: linear-gradient(135deg, #f2784b, #0a1330); }
 .dest-istanbul{ background: linear-gradient(135deg, #a15fd9, #0e1a44); }
+.dest-japan   { background: linear-gradient(135deg, #ef476f, #14213d); }
 
 .dest-badge {
   background: rgba(255, 255, 255, 0.9);

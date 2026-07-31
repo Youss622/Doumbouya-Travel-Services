@@ -97,6 +97,42 @@ if (productsGrid) {
   renderProducts();
 }
 
+// ---------- Études : afficher la liste des pays ----------
+const togglePaysBtn = document.getElementById("toggle-pays-etudes");
+
+if (togglePaysBtn) {
+  togglePaysBtn.addEventListener("click", () => {
+    const liste = document.getElementById("liste-pays-etudes");
+    liste.hidden = !liste.hidden;
+    togglePaysBtn.textContent = liste.hidden ? "Voir les pays disponibles" : "Masquer les pays";
+  });
+}
+
+// ---------- Formulaire Partenariat (envoi via WhatsApp) ----------
+const partnerForm = document.getElementById("partenariat-form");
+
+if (partnerForm) {
+  const partnerNote = document.getElementById("partenariat-form-note");
+
+  partnerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(partnerForm).entries());
+    const lines = [
+      "Bonjour, je souhaite proposer un partenariat avec DTS.",
+      `Organisation : ${data.organisation}`,
+      `Contact : ${data.contact}`,
+      `Téléphone : ${data.phone}`,
+      `Email : ${data.email}`,
+      `Type de structure : ${data.type || "Non précisé"}`,
+      "",
+      data.message || "(aucun message)",
+    ];
+    const url = "https://wa.me/224627931640?text=" + encodeURIComponent(lines.join("\n"));
+    partnerNote.textContent = "Ouverture de WhatsApp...";
+    window.open(url, "_blank", "noopener");
+  });
+}
+
 // ---------- Rotating announcement ticker ----------
 const tickerMessages = [
   "✈️ Billets, visas, hôtels et circuits : tout en un seul endroit.",
