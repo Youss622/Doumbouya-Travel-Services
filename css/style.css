@@ -333,7 +333,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 @media (max-width: 760px) {
-  .hero-bg { background-attachment: scroll; }
+  .hero-bg,
+  .page-hero .hero-bg { background-attachment: scroll; }
 }
 
 .hero-content { text-align: center; max-width: 780px; margin: 0 auto; }
@@ -439,9 +440,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .page-hero .hero-bg { position: absolute; inset: 0; z-index: -1;
   background:
-    radial-gradient(circle at 15% 20%, rgba(79, 163, 255, 0.35), transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(126, 200, 255, 0.25), transparent 50%),
-    linear-gradient(160deg, var(--navy-950), var(--navy-900) 45%, var(--navy-700));
+    linear-gradient(rgba(5, 11, 26, 0.72), rgba(5, 11, 26, 0.72)),
+    url("../images/hero-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .page-hero h1 {
