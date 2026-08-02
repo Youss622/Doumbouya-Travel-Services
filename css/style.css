@@ -549,6 +549,91 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .service-card p { margin: 0; color: var(--grey-600); font-size: 0.95rem; }
 
+/* ---------- Legal pages ---------- */
+.legal-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-updated {
+  color: var(--grey-600);
+  font-size: 0.85rem;
+  margin: -8px 0 32px;
+}
+
+.legal-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 40px 44px;
+}
+
+.legal-card h2 {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  color: var(--navy-900);
+  margin: 40px 0 12px;
+}
+
+.legal-card h2:first-child { margin-top: 0; }
+
+.legal-card p,
+.legal-card li {
+  color: var(--ink, var(--navy-900));
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #3a4354;
+}
+
+.legal-card ul { margin: 0 0 12px; padding-left: 22px; }
+.legal-card p { margin: 0 0 12px; }
+
+.legal-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 20px;
+  font-size: 0.9rem;
+}
+
+.legal-card th, .legal-card td {
+  border: 1px solid var(--grey-200);
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-card th { background: var(--off-white); font-weight: 600; }
+
+.legal-note {
+  background: var(--accent-soft, var(--sky-200));
+  background: #eef4ff;
+  border: 1px solid #d7e6ff;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+}
+
+.legal-foot {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--grey-200);
+  color: var(--grey-600);
+  font-size: 0.85rem;
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 18px;
+  margin: 14px 0 0;
+  font-size: 0.82rem;
+}
+
+.footer-legal-links a { color: var(--grey-600); }
+.footer-legal-links a:hover { color: var(--blue-400); }
+
 /* ---------- Boutique ---------- */
 .shop-toolbar {
   display: flex;
@@ -747,6 +832,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 .dest-dakar   { background: linear-gradient(135deg, #f2784b, #0a1330); }
 .dest-istanbul{ background: linear-gradient(135deg, #a15fd9, #0e1a44); }
 .dest-japan   { background: linear-gradient(135deg, #ef476f, #14213d); }
+.dest-china   { background: linear-gradient(135deg, #e0393e, #7a0c14); }
+
+.dest-card-link { display: block; color: inherit; }
 
 .dest-badge {
   background: rgba(255, 255, 255, 0.9);
