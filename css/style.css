@@ -448,6 +448,32 @@ ul { list-style: none; margin: 0; padding: 0; }
   background-attachment: fixed;
 }
 
+/* Pays : la "merveille" du pays en fond du bandeau, au clic depuis Tourisme/Études */
+.page-hero .hero-bg.country-canada    { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/country-canada.jpg"); }
+.page-hero .hero-bg.country-france    { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/country-france.jpg"); }
+.page-hero .hero-bg.country-maroc     { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/country-maroc.jpg"); }
+.page-hero .hero-bg.country-japon     { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/country-japon.jpg"); }
+.page-hero .hero-bg.country-malaisie  { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/country-malaisie.jpg"); }
+.page-hero .hero-bg.country-turquie   { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/country-turquie.jpg"); }
+.page-hero .hero-bg.country-allemagne { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/country-allemagne.jpg"); }
+.page-hero .hero-bg.country-chine     { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/country-chine.jpg"); }
+
+/* Études : images distinctes de Tourisme pour le même pays */
+.page-hero .hero-bg.etudes-canada        { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/etudes-canada.jpg"); }
+.page-hero .hero-bg.etudes-canada-pilote { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/etudes-canada-pilote.jpg"); }
+.page-hero .hero-bg.etudes-france        { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/etudes-france.jpg"); }
+.page-hero .hero-bg.etudes-france-prive  { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/etudes-france-prive.jpg"); }
+.page-hero .hero-bg.etudes-malaisie      { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/etudes-malaisie.jpg"); }
+
+/* Fonds propres à chaque page, alignés sur les pages équivalentes du site de référence */
+.page-hero .hero-bg.page-formations   { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-formations.jpg"); }
+.page-hero .hero-bg.page-billets      { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-billets.jpg"); }
+.page-hero .hero-bg.page-apropos      { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-apropos.jpg"); }
+.page-hero .hero-bg.page-contact      { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-contact.jpg"); }
+.page-hero .hero-bg.page-partenariat  { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-partenariat.jpg"); }
+.page-hero .hero-bg.page-etudes       { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-etudes.jpg"); }
+.page-hero .hero-bg.page-boutique     { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-boutique.jpg"); }
+
 .page-hero h1 {
   font-family: var(--font-head);
   font-size: clamp(1.9rem, 4vw, 2.7rem);
