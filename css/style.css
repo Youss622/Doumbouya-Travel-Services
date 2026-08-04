@@ -768,6 +768,55 @@ ul { list-style: none; margin: 0; padding: 0; }
   box-shadow: var(--shadow-card);
 }
 
+/* ---------- Country chips with photo (Mobilité Internationale) ---------- */
+.country-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  margin: 8px 0 44px;
+}
+
+.country-photo-card {
+  position: relative;
+  height: 110px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 14px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow-card);
+}
+
+.country-photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 11, 26, 0) 40%, rgba(5, 11, 26, 0.8) 100%);
+}
+
+.country-photo-card span {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.country-photo-card.cpc-canada      { background-image: url("../images/country-canada.jpg"); }
+.country-photo-card.cpc-france      { background-image: url("../images/country-france.jpg"); }
+.country-photo-card.cpc-allemagne   { background-image: url("../images/country-allemagne.jpg"); }
+.country-photo-card.cpc-chine       { background-image: url("../images/country-chine.jpg"); }
+.country-photo-card.cpc-maroc       { background-image: url("../images/country-maroc.jpg"); }
+.country-photo-card.cpc-belgique    { background-image: url("../images/country-belgique.jpg"); }
+.country-photo-card.cpc-portugal    { background-image: url("../images/country-portugal.jpg"); }
+.country-photo-card.cpc-bielorussie { background-image: url("../images/country-bielorussie.jpg"); }
+.country-photo-card.cpc-luxembourg  { background-image: url("../images/country-luxembourg.jpg"); }
+.country-photo-card.cpc-roumanie    { background-image: url("../images/country-roumanie.jpg"); }
+
 /* ---------- Price table ---------- */
 .price-table-wrap {
   overflow-x: auto;
