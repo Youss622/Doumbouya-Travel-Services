@@ -963,6 +963,59 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-radius: 50%;
 }
 
+/* Fondateur */
+.founder-inner {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.founder-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.founder-media::before {
+  content: "";
+  position: absolute;
+  inset: 22px -22px -22px 22px;
+  background: linear-gradient(135deg, var(--blue-500), var(--navy-700));
+  border-radius: var(--radius);
+}
+
+.founder-photo {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.founder-role {
+  margin: -6px 0 18px;
+  color: var(--blue-500);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.founder-quote {
+  position: relative;
+  margin: 0;
+  padding-left: 22px;
+  border-left: 3px solid var(--blue-500);
+  color: var(--navy-900);
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
 .about-list { margin: 0 0 32px; }
 
 .about-list li {
@@ -1264,9 +1317,11 @@ ul { list-style: none; margin: 0; padding: 0; }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
 
   .about-inner,
+  .founder-inner,
   .contact-inner { grid-template-columns: 1fr; }
 
-  .about-media { order: -1; }
+  .about-media,
+  .founder-media { order: -1; }
 
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand-col { grid-column: 1 / -1; }
