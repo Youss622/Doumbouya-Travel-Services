@@ -899,16 +899,28 @@ ul { list-style: none; margin: 0; padding: 0; }
   display: flex;
   align-items: flex-end;
   padding: 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.dest-paris   { background: linear-gradient(135deg, #2f7bf6, #142257); }
-.dest-dubai   { background: linear-gradient(135deg, #d9a441, #142257); }
-.dest-newyork { background: linear-gradient(135deg, #4fa3ff, #050b1a); }
-.dest-mecca   { background: linear-gradient(135deg, #2f9e6e, #0e1a44); }
-.dest-dakar   { background: linear-gradient(135deg, #f2784b, #0a1330); }
-.dest-istanbul{ background: linear-gradient(135deg, #a15fd9, #0e1a44); }
-.dest-japan   { background: linear-gradient(135deg, #ef476f, #14213d); }
-.dest-china   { background: linear-gradient(135deg, #e0393e, #7a0c14); }
+.dest-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 11, 26, 0) 55%, rgba(5, 11, 26, 0.65) 100%);
+}
+
+.dest-img .dest-badge { position: relative; z-index: 1; }
+
+.dest-canada    { background-image: url("../images/dest-canada.jpg"); }
+.dest-france    { background-image: url("../images/dest-france.jpg"); }
+.dest-maroc     { background-image: url("../images/dest-maroc.jpg"); }
+.dest-japon     { background-image: url("../images/dest-japon.jpg"); }
+.dest-malaisie  { background-image: url("../images/dest-malaisie.jpg"); }
+.dest-turquie   { background-image: url("../images/dest-turquie.jpg"); }
+.dest-allemagne { background-image: url("../images/dest-allemagne.jpg"); }
+.dest-chine     { background-image: url("../images/dest-chine.jpg"); }
 
 .dest-card-link { display: block; color: inherit; }
 
