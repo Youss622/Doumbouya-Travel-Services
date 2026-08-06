@@ -473,6 +473,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .page-hero .hero-bg.page-partenariat  { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-partenariat.jpg"); }
 .page-hero .hero-bg.page-etudes       { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-etudes.jpg"); }
 .page-hero .hero-bg.page-boutique     { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-boutique.jpg"); }
+.page-hero .hero-bg.page-tourisme     { background-image: linear-gradient(rgba(5, 11, 26, 0.6), rgba(5, 11, 26, 0.6)), url("../images/page-tourisme.jpg"); }
 
 .page-hero h1 {
   font-family: var(--font-head);
